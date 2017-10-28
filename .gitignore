@@ -32,3 +32,5 @@ tests/_support/_generated
 /runtime
 /tests
 assets
+tests
+runtime
