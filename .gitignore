@@ -34,3 +34,4 @@ tests/_support/_generated
 assets
 tests
 runtime
+/composer.phar
