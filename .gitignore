@@ -28,21 +28,15 @@ phpunit.phar
 
 tests/_output/*
 tests/_support/_generated
-/vendor
 /runtime
-/tests
-assets
-tests
-runtime
-/composer.phar
-/.gitattributes
-/.gitignore
-/codeception.yml
-/composer.lock
-/composer.phar
+/web/assets
 /LICENSE.md
 /README.md
 /requirements.php
 /yii
 /yii.bat
+/composer.lock
+/composer.phar
+/.gitignore
+/codeception.yml
 /.bowerrc
