@@ -40,3 +40,4 @@ tests/_support/_generated
 /.gitignore
 /codeception.yml
 /.bowerrc
+/composer.lock
