@@ -35,3 +35,14 @@ assets
 tests
 runtime
 /composer.phar
+/.gitattributes
+/.gitignore
+/codeception.yml
+/composer.lock
+/composer.phar
+/LICENSE.md
+/README.md
+/requirements.php
+/yii
+/yii.bat
+/.bowerrc
