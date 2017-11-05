@@ -30,36 +30,41 @@
             [
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
-                    ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
-                    ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
-                    ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
-                    ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
-                    [
-                        'label' => 'Same tools',
-                        'icon' => 'share',
-                        'url' => '#',
-                        'items' => [
-                            ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii'],],
-                            ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug'],],
-                            [
-                                'label' => 'Level One',
-                                'icon' => 'circle-o',
-                                'url' => '#',
-                                'items' => [
-                                    ['label' => 'Level Two', 'icon' => 'circle-o', 'url' => '#',],
-                                    [
-                                        'label' => 'Level Two',
-                                        'icon' => 'circle-o',
-                                        'url' => '#',
-                                        'items' => [
-                                            ['label' => 'Level Three', 'icon' => 'circle-o', 'url' => '#',],
-                                            ['label' => 'Level Three', 'icon' => 'circle-o', 'url' => '#',],
-                                        ],
-                                    ],
-                                ],
-                            ],
-                        ],
-                    ],
+                    ['label' => 'MENU', 'options' => ['class' => 'header']],
+					
+					['label' => 'Administrator',  'url' => '#', 
+                                'items' => [ ['label' => 'Change Password', 'icon' => '#', 'url' => '#',],
+										   
+
+                    ]],
+					
+                    ['label' => 'Master',  'url' => '#', 
+                                'items' => [ ['label' => 'Cabang', 'icon' => '#', 'url' => ['/mst-cabang'],],
+                                           ['label' => 'User', 'icon' => '#', 'url' => ['/mst-usr'],],
+                                           ['label' => 'Satuan', 'icon' => '#', 'url' => ['/mst-satuan'],],
+										   ['label' => 'Menu', 'icon' => '#', 'url' => ['/mst-menu'],],
+										   ['label' => 'Group', 'icon' => '#', 'url' => ['/mst-group'],],
+										   ['label' => 'User Privilages', 'icon' => '#', 'url' => ['/mst-usr-privilages'],],
+										   ['label' => 'Customer Type', 'icon' => '#', 'url' => ['/mst-cust-type'],],
+										   
+
+                    ]],
+					
+					['label' => 'Proyek',  'url' => '#', 
+                                'items' => [ ['label' => 'Customer', 'icon' => '#', 'url' => ['/mst-customer-pas'],],
+                                           ['label' => 'Mapping Lokasi Proyek', 'icon' => '#', 'url' => ['/mst-map-lokasi-project'],],
+										   ['label' => 'Paket Proyek', 'icon' => '#', 'url' => ['/mst-packet-project'],],
+                                          
+										   
+
+                    ]],
+					
+                    /* ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']], */
+                   /*  ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest], */
+                  
+				  
+					['label' => 'Material & Product',  'url' => '#', ],
+					['label' => 'Transaksi',  'url' => '#', ],
                 ],
             ]
         ) ?>
