@@ -39,13 +39,13 @@
                     ]],
 					
                     ['label' => 'Master',  'url' => '#', 
-                                'items' => [ ['label' => 'Cabang', 'icon' => '#', 'url' => ['/mst-cabang'],],
-                                           ['label' => 'User', 'icon' => '#', 'url' => ['/mst-usr'],],
-                                           ['label' => 'Satuan', 'icon' => '#', 'url' => ['/mst-satuan'],],
-										   ['label' => 'Menu', 'icon' => '#', 'url' => ['/mst-menu'],],
-										   ['label' => 'Group', 'icon' => '#', 'url' => ['/mst-group'],],
-										   ['label' => 'User Privilages', 'icon' => '#', 'url' => ['/mst-usr-privilages'],],
-										   ['label' => 'Customer Type', 'icon' => '#', 'url' => ['/mst-cust-type'],],
+                                'items' => [ ['label' => 'Cabang', 'icon' => '#', 'url' => ['/master/mst-cabang'],],
+                                           ['label' => 'User', 'icon' => '#', 'url' => ['/master/mst-usr'],],
+                                           ['label' => 'Satuan', 'icon' => '#', 'url' => ['/master/mst-satuan'],],
+										   ['label' => 'Menu', 'icon' => '#', 'url' => ['/master/mst-menu'],],
+										   ['label' => 'Group', 'icon' => '#', 'url' => ['/master/mst-group'],],
+										   ['label' => 'User Privilages', 'icon' => '#', 'url' => ['/master/mst-usr-privilages'],],
+										   ['label' => 'Customer Type', 'icon' => '#', 'url' => ['/master/mst-cust-type'],],
 										   
 
                     ]],
