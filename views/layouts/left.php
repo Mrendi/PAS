@@ -32,28 +32,50 @@
                 'items' => [
                     ['label' => 'MENU', 'options' => ['class' => 'header']],
 					
-					['label' => 'Administrator',  'url' => '#', 
-                                'items' => [ ['label' => 'Change Password', 'icon' => '#', 'url' => '#',],
+					['label' => 'Master Web',  'url' => '#', 'icon' => 'maxcdn' ,
+                                'items' => [ ['label' => 'New User', 'icon' => '#', 'url' => ['/admin/user/signup'], 'icon' => 'spinner', ],
+											['label' => 'New Route', 'icon' => '#', 'url' => ['/admin/route'],'icon' => 'spinner', ],
+											['label' => 'New Permission', 'icon' => '#', 'url' => ['/admin/permission'],'icon' => 'spinner', ],
+											['label' => 'New Role', 'icon' => '#', 'url' => ['/admin/role'],'icon' => 'spinner', ],
+											['label' => 'New Rule', 'icon' => '#', 'url' => ['/admin/rule'],'icon' => 'spinner', ],
+											['label' => 'New Menu', 'icon' => '#', 'url' => ['/admin/menu'],'icon' => 'spinner', ],
+											['label' => 'Paging User', 'icon' => '#', 'url' => ['/admin/user'],'icon' => 'spinner', ],
+											['label' => 'Assignment', 'icon' => '#', 'url' => ['/admin/assignment'],'icon' => 'spinner', ],
+											
+											
+                                           
+
+                    ]],
+					
+					['label' => 'Administrator',  'url' => '#', 'icon' => 'buysellads',
+                                'items' => [ ['label' => 'Change Password', 'icon' => '#', 'url' => '#', 'icon' => 'spinner',],
 										   
 
                     ]],
 					
-                    ['label' => 'Master',  'url' => '#', 
-                                'items' => [ ['label' => 'Cabang', 'icon' => '#', 'url' => ['/mst-cabang'],],
-                                           ['label' => 'User', 'icon' => '#', 'url' => ['/mst-usr'],],
-                                           ['label' => 'Satuan', 'icon' => '#', 'url' => ['/mst-satuan'],],
-										   ['label' => 'Menu', 'icon' => '#', 'url' => ['/mst-menu'],],
-										   ['label' => 'Group', 'icon' => '#', 'url' => ['/mst-group'],],
-										   ['label' => 'User Privilages', 'icon' => '#', 'url' => ['/mst-usr-privilages'],],
-										   ['label' => 'Customer Type', 'icon' => '#', 'url' => ['/mst-cust-type'],],
+                    ['label' => 'Master',  'url' => '#', 'icon' => 'medium',
+                                'items' => [ ['label' => 'Cabang', 'icon' => '#', 'url' => ['/master/mst-cabang'], 'icon' => 'spinner',  ],
+                                           ['label' => 'User', 'icon' => '#', 'url' => ['/master/mst-usr'],  'icon' => 'spinner',  ],
+                                           ['label' => 'Satuan', 'icon' => '#', 'url' => ['/master/mst-satuan'],  'icon' => 'spinner', ],
+										   ['label' => 'Menu', 'icon' => '#', 'url' => ['/master/mst-menu'],  'icon' => 'spinner',],
+										   ['label' => 'Group', 'icon' => '#', 'url' => ['/master/mst-group'], 'icon' => 'spinner',],
+										   ['label' => 'User Privilages', 'icon' => '#', 'url' => ['/master/mst-usr-privilages'], 'icon' => 'spinner',],
+										   ['label' => 'Customer Type', 'icon' => '#', 'url' => ['/master/mst-cust-type'], 'icon' => 'spinner',],
 										   
 
                     ]],
 					
-					['label' => 'Proyek',  'url' => '#', 
-                                'items' => [ ['label' => 'Customer', 'icon' => '#', 'url' => ['/mst-customer-pas'],],
-                                           ['label' => 'Mapping Lokasi Proyek', 'icon' => '#', 'url' => ['/mst-map-lokasi-project'],],
-										   ['label' => 'Paket Proyek', 'icon' => '#', 'url' => ['/mst-packet-project'],],
+					['label' => 'Timbangan',  'url' => '#', 'icon' => 'text-width',
+                                'items' => [ ['label' => 'Opr-Timbangan', 'icon' => '#', 'url' => ['/timbangan/tr-timbangan'],],
+                                          
+										   
+
+                    ]],
+					
+					['label' => 'Proyek',  'url' => '#',  'icon' => 'paypal',
+                                'items' => [ ['label' => 'Customer', 'icon' => '#', 'url' => ['/proyek/mst-customer-pas'], 'icon' => 'spinner',],
+                                           ['label' => 'Mapping Lokasi Proyek', 'icon' => '#', 'url' => ['/mst-map-lokasi-project'],'icon' => 'spinner',],
+										   ['label' => 'Paket Proyek', 'icon' => '#', 'url' => ['/mst-packet-project'],'icon' => 'spinner',],
                                           
 										   
 
@@ -63,8 +85,17 @@
                    /*  ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest], */
                   
 				  
-					['label' => 'Material & Product',  'url' => '#', ],
-					['label' => 'Transaksi',  'url' => '#', ],
+					['label' => 'Material & Product',  'url' => '#', 'icon' => 'maxcdn' ,
+                                            
+                                          'items' => [ ['label' => 'Item Location', 'icon' => '#', 'url' => ['/material/mst-lokasi-item'], 'icon' => 'spinner',],
+                                           ['label' => 'Data Soure', 'icon' => '#', 'url' => ['/material/mst-source-item'],'icon' => 'spinner',],
+                    ['label' => 'Item Type', 'icon' => '#', 'url' => ['/mst-packet-project'],'icon' => 'spinner',],
+                                              ['label' => 'Supplier', 'icon' => '#', 'url' => ['/mst-packet-project'],'icon' => 'spinner',],
+                                          
+										   
+                                            
+                                            ]],
+					/* ['label' => 'Transaksi',  'url' => '#', ], */
                 ],
             ]
         ) ?>

@@ -263,8 +263,10 @@ use yii\helpers\Html;
                             </div>
                             <div class="pull-right">
                                 <?= Html::a(
-                                    'Sign out',
-                                    ['/site/logout'],
+                                    //'Sign Out (' . Yii::$app->user->identity->username . ')',
+									//['class' => 'btn btn-link logout']
+								   'Sign out',
+                                   ['/site/logout'],//['/site/logout'],
                                     ['data-method' => 'post', 'class' => 'btn btn-default btn-flat']
                                 ) ?>
                             </div>
