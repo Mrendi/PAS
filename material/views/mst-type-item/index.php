@@ -4,35 +4,35 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
 /* @var $this yii\web\View */
-/* @var $searchModel app\master\models\MstUsrPrivilagesSearch */
+/* @var $searchModel app\material\models\MstTypeItemSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Master User Privilages';
+$this->title = 'Master Type Item';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="mst-usr-privilages-index">
+<div class="mst-type-item-index">
 
     
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create User Privilages', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Type Item', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
- <?php Pjax::begin(); ?>    <?= GridView::widget([
+<?php Pjax::begin(); ?>    <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'kode_cab',
-            'kode_usr_priv',
-            'kodegrup',
-            'kode_menu',
-            'accs_usr',
-            // 'upd_by',
-            // 'upd_dt_tm',
-            // 'is_cancel',
-            // 'description',
+            'kode_type_item',
+            'nama_type_item',
+            'description',
+            'created_by',
+            'created_date',
+            // 'modified_by',
+            // 'modified_date',
+            // 'status',
+            // 'type_code',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

@@ -1,18 +1,18 @@
 <?php
 
-namespace app\controllers;
+namespace app\material\controllers;
 
 use Yii;
-use app\models\MstPacketProject;
-use app\models\MstPacketProjectSearch;
+use app\material\models\MstSupplier;
+use app\material\models\MstSupplierSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * MstPacketProjectController implements the CRUD actions for MstPacketProject model.
+ * MstSupplierController implements the CRUD actions for MstSupplier model.
  */
-class MstPacketProjectController extends Controller
+class MstSupplierController extends Controller
 {
     /**
      * @inheritdoc
@@ -30,12 +30,12 @@ class MstPacketProjectController extends Controller
     }
 
     /**
-     * Lists all MstPacketProject models.
+     * Lists all MstSupplier models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new MstPacketProjectSearch();
+        $searchModel = new MstSupplierSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class MstPacketProjectController extends Controller
     }
 
     /**
-     * Displays a single MstPacketProject model.
+     * Displays a single MstSupplier model.
      * @param string $id
      * @return mixed
      */
@@ -57,25 +57,25 @@ class MstPacketProjectController extends Controller
     }
 
     /**
-     * Creates a new MstPacketProject model.
+     * Creates a new MstSupplier model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new MstPacketProject();
+        $model = new MstSupplier();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->kode_packet_project]);
+            return $this->redirect(['view', 'id' => $model->supplier_code]);
         } else {
-            return $this->renderAjax('create', [
+            return $this->render('create', [
                 'model' => $model,
             ]);
         }
     }
 
     /**
-     * Updates an existing MstPacketProject model.
+     * Updates an existing MstSupplier model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param string $id
      * @return mixed
@@ -85,7 +85,7 @@ class MstPacketProjectController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->kode_packet_project]);
+            return $this->redirect(['view', 'id' => $model->supplier_code]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -94,7 +94,7 @@ class MstPacketProjectController extends Controller
     }
 
     /**
-     * Deletes an existing MstPacketProject model.
+     * Deletes an existing MstSupplier model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param string $id
      * @return mixed
@@ -107,30 +107,18 @@ class MstPacketProjectController extends Controller
     }
 
     /**
-     * Finds the MstPacketProject model based on its primary key value.
+     * Finds the MstSupplier model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param string $id
-     * @return MstPacketProject the loaded model
+     * @return MstSupplier the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = MstPacketProject::findOne($id)) !== null) {
+        if (($model = MstSupplier::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
-    }
-    
-    
-     public function actionLookup()
-    {
-        $searchModel = new MstPacketProjectSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
-        return $this->renderAjax('lookup', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
     }
 }

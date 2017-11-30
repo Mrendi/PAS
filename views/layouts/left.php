@@ -89,8 +89,8 @@
                                             
                                           'items' => [ ['label' => 'Item Location', 'icon' => '#', 'url' => ['/material/mst-lokasi-item'], 'icon' => 'spinner',],
                                            ['label' => 'Data Soure', 'icon' => '#', 'url' => ['/material/mst-source-item'],'icon' => 'spinner',],
-                    ['label' => 'Item Type', 'icon' => '#', 'url' => ['/mst-packet-project'],'icon' => 'spinner',],
-                                              ['label' => 'Supplier', 'icon' => '#', 'url' => ['/mst-packet-project'],'icon' => 'spinner',],
+                    ['label' => 'Item Type', 'icon' => '#', 'url' => ['/material/mst-type-item'],'icon' => 'spinner',],
+                                              ['label' => 'Supplier', 'icon' => '#', 'url' => ['/material/mst-supplier'],'icon' => 'spinner',],
                                           
 										   
                                             
