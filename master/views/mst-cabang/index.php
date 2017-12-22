@@ -7,14 +7,14 @@ use yii\grid\GridView;
 /* @var $searchModel app\master\models\MstCabangSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Mst Cabangs';
+$this->title = 'Master Cabang';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="mst-cabang-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
+    <br>
     <p>
         <?= Html::a('Create Mst Cabang', ['create'], ['class' => 'btn btn-success']) ?>
     </p>

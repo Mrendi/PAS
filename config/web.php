@@ -7,6 +7,28 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+	'modules' =>  [
+		//Rendi 18 
+		'admin' => [
+            'class' => 'mdm\admin\Module',
+           
+        ],
+		
+		'master' => [
+								'class' => 'app\master\Master',
+							],
+							
+		'timbangan' => [
+								'class' => 'app\timbangan\Timbangan',
+							],
+            
+                'proyek' => [
+								'class' => 'app\proyek\Proyek',
+							],
+                'material' => [
+								'class' => 'app\material\Material',
+							]
+	],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -15,10 +37,14 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-        'user' => [
-            'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
+		'authManager' => [
+            'class' => 'yii\rbac\DbManager' , //'yii\rbac\PhpManager', // or use 'yii\rbac\DbManager'
+			
         ],
+       // 'user' => [
+       //     'identityClass' => 'app\models\User',
+       //     'enableAutoLogin' => true,
+       //],
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
@@ -38,6 +64,27 @@ $config = [
                 ],
             ],
         ],
+		
+		
+	//Rendi 18 
+	'assetManager' => [
+            'bundles' => [
+                            'dmstr\web\AdminLteAsset' => [
+                                 'skin' => 'skin-purple',
+            ],
+        ],
+    ],
+	 
+		'user' => [
+            'identityClass' => 'mdm\admin\models\User',
+            'loginUrl' => ['admin/user/login'],
+                    
+            'class' => 'app\components\User', /* Rendi 5 des 2017 */
+        ],
+		
+		
+		//End
+		
         'db' => $db,
         /*
         'urlManager' => [
@@ -48,6 +95,24 @@ $config = [
         ],
         */
     ],
+	
+	//Rendi 18 
+	 'as access' => [
+        'class' => 'mdm\admin\components\AccessControl',
+        'allowActions' => [
+			'site/logout',
+            //'*',
+			//'site/*',
+            //'admin/*',
+            //'some-controller/some-action',
+            // The actions listed here will be allowed to everyone including guests.
+            // So, 'admin/*' should not appear here in the production, of course.
+            // But in the earlier stages of your development, you may probably want to
+            // add a lot of actions here until you finally completed setting up rbac,
+            // otherwise you may not even take a first step.
+        ]
+    ],
+	
     'params' => $params,
 ];
 

@@ -59,7 +59,7 @@ class TrTimbangan extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['no_tr_timbangan'], 'required'],
+            
             [['tanggal', 'in_datetime', 'out_datetime', 'cekpembayaran_upd_dt_tm'], 'safe'],
             [['in_jml_berat', 'out_jml_berat', 'jml_netton', 'jml_bruto', 'jml_potongan'], 'number'],
             [['tr_status', 'is_cancel', 'cekpembayaran'], 'integer'],

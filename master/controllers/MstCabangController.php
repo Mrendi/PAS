@@ -121,4 +121,16 @@ class MstCabangController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+    
+    // Rendi tambah
+     public function actionLookupbranch()
+    {
+        $searchModel = new MstCabangSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->renderAjax('..\..\..\lookup\lookupbranch', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
 }
