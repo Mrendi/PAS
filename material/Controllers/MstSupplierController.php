@@ -121,4 +121,17 @@ class MstSupplierController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+    
+     public function actionLookupsupplier()
+    {
+        $searchModel = new MstSupplierSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+//        $dataProvider->query->where('out_datetime is null and in_datetime is not null');
+         //echo var_dump($dataProvider);
+        return $this->renderAjax('..\..\..\lookup\lookupsupplier', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+    
 }

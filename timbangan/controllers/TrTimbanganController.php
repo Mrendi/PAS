@@ -185,4 +185,16 @@ class TrTimbanganController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
+    
+     public function actionLookuptruck2()
+    {
+        $searchModel = new TrTimbanganSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider->query->where('out_datetime is null and in_datetime is not null');
+         //echo var_dump($dataProvider);
+        return $this->renderAjax('..\..\..\lookup\lookuptruck2', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
 }

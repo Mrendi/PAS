@@ -78,4 +78,21 @@ class MstSupplierSearch extends MstSupplier
 
         return $dataProvider;
     }
+    
+    
+    public function getSuppbycode($param) {
+        $query = MstSupplier::find()
+                 ->where(['supplier_code' => $param])
+                 ->one();
+        
+        return $query;
+    }
+    
+     public function getSuppByName($param) {
+        $query = MstSupplier::find()
+                 ->where(['supplier_name' => $param])
+                 ->one();
+        
+        return $query;
+    }
 }

@@ -121,4 +121,28 @@ class MstTypeItemController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+    
+     // Rendi tambah
+     public function actionLookupitem()
+    {
+        $searchModel = new MstTypeItemSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->renderAjax('..\..\..\lookup\lookupitem', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+    
+    // Rendi tambah untuk PO
+     public function actionLookupitempo()
+    {
+        $searchModel = new MstTypeItemSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider->query->where('type_code = 2');
+        return $this->renderAjax('..\..\..\lookup\lookupitempo', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
 }

@@ -133,4 +133,15 @@ class MstCabangController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
+    
+     public function actionLookupbranch2()
+    {
+        $searchModel = new MstCabangSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->renderAjax('..\..\..\lookup\lookupbranch2', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
 }

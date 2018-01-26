@@ -98,6 +98,34 @@
                                             
                                             ]],
 					/* ['label' => 'Transaksi',  'url' => '#', ], */
+                   ['label' => 'Purchase Order',  'url' => '#', 'icon' => 'maxcdn' ,
+                                            
+                                          'items' => [ ['label' => 'Input PO Supplier', 'icon' => '#', 'url' => ['/po/purchaseorder/create'], 'icon' => 'spinner',],
+                                                     ['label' => 'Input PO Customer', 'icon' => '#', 'url' => ['/pocust/purchaseordercustomer/create'],'icon' => 'spinner',],
+                                          
+                                          
+										   
+                                            
+                                            ]],
+                    
+                    ['label' => 'Delivery Order',  'url' => '#', 'icon' => 'maxcdn' ,
+                                            
+                                          'items' => [ ['label' => 'Input DO', 'icon' => '#', 'url' => ['/po/purchaseorder/create'], 'icon' => 'spinner',],
+                                                     
+                                          
+                                          
+										   
+                                            
+                                            ]],
+                    
+                     ['label' => 'Product',  'url' => '#', 'icon' => 'maxcdn' ,
+                                            
+                                          'items' => [ ['label' => 'Input Product', 'icon' => '#', 'url' => ['/product'], 'icon' => 'spinner',],
+                                          
+                                          
+										   
+                                            
+                                            ]],
                 ],
             ]
         ) ?>
