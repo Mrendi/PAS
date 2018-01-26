@@ -27,6 +27,12 @@ $config = [
 							],
                 'material' => [
 								'class' => 'app\material\Material',
+							],
+                 'po' => [
+								'class' => 'app\po\PO',
+							],
+                 'pocust' => [
+								'class' => 'app\pocust\POCust',
 							]
 	],
     'components' => [
